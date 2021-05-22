@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Weather App</title>
+    <link rel="icon" href="/img/cloudy.png">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+    <div class="page-content">
+        {{>header}}
+        <form action="">
+            <input type="text" placeholder="Location">
+            <button>Search</button>
+        </form>
+        <p id="first-message"></p>
+        <p id="second-message"></p>
+    </div>
+    {{>footer}}
+    <script src="./js/app.js"></script>
+</body>
+
+</html>
