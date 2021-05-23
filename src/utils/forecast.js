@@ -5,8 +5,8 @@ const getWeather = (longitude, latitude, callback) => {
     request({url:weatherUrl},(error, response)=>{
         let myError = undefined
         let data = undefined
-        // Unable to connect
         if(error){
+            // Unable to connect
             myError = 'Error: Unable to connect weather service.'
             callback(myError , data);
         } else if(badOutput = JSON.parse((response).body).error){
