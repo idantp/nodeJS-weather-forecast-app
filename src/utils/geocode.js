@@ -12,6 +12,7 @@ const geocode = (address, callback) => {
                 // Bad output
                 callback('Error: Couldn\'t find the specific location, please enter a new one.', undefined)
             } else{
+                // check
                 const data = body.features[0]
                 callback(undefined, {
                     location: data.place_name,
