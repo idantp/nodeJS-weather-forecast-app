@@ -15,10 +15,11 @@ const getWeather = (longitude, latitude, callback) => {
             callback(myError, data);
         } else{
             const respData = JSON.parse((response).body).current 
-            data = ('Weather: ' + respData.weather_descriptions[0] +'.\n' + 
-            'Current temp: ' + respData.temperature +'.\n' + 
-            'Current humidity: ' + respData.humidity +'.\n' + 
-            'Feels like: ' + respData.feelslike +'.\n'
+            data = ('Weather: ' + respData.weather_descriptions[0] +'. ' + 
+            'Current temp: ' + respData.temperature +'. ' + 
+            'Current humidity: ' + respData.humidity +'. ' + 
+            'Feels like: ' + respData.feelslike +'. ' + 
+            'Precipitation: ' + respData.precip + '.'
             )
             callback(myError, data);
         }

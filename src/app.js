@@ -33,14 +33,14 @@ app.get('', (req, res) => {
 
 app.get('/about', (req, res) => {
     res.render('about',{
-        title: 'This is about page',
+        title: 'About page',
         name: 'Idan'
     })
 })
 
 app.get('/help', (req, res) => {
     res.render('help',{
-        title: 'This is help page',
+        title: 'Help page',
         name: 'Idan'
     })
 })
@@ -56,6 +56,7 @@ app.get('/help/*', (req, res) => {
 
 app.get('/weather', (req, res) => {
     if(!req.query.address){
+        // address param is empty
         return res.send({
             error: 'Please insert address.'
         })

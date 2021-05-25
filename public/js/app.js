@@ -1,4 +1,4 @@
-// console.log('client side js file');
+// console.log('Client side');
 
 
 const weatherForm = document.querySelector('form')
@@ -13,13 +13,14 @@ weatherForm.addEventListener('submit', (e)=>{
     secondMessage.textContent = ''
     const url = '/weather?address=' + (location) 
     fetch(url).then((response) => {
-    response.json().then((data) => {
-        firstMessage.textContent = ''
-        if(data.error){
-            return secondMessage.textContent = data.error
-        }
-        firstMessage.textContent = data.location
-        secondMessage.textContent = data.forecast
+        // converts stream to JSON
+        response.json().then((data) => {
+            firstMessage.textContent = ''
+            if(data.error){
+                return secondMessage.textContent = data.error
+            }
+            firstMessage.textContent = data.location
+            secondMessage.textContent = data.forecast
     })
 })
 })
